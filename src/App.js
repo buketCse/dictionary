@@ -1,13 +1,13 @@
-import BodyComponent from "./components/BodyComponent";
+import BodyComponent from "./components/Body/BodyComponent";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
     <div className="dictionary-app">
-      <header className="header">
-        Header
-      </header>
+      <Header/>
       <BodyComponent/>
-      <footer>Footer</footer>
+      <Footer/>
     </div>
   )
 }
