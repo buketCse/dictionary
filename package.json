@@ -3,15 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@popperjs/core": "^2.11.7",
+    "@react-querybuilder/bootstrap": "4.2.5",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "@types/react-bootstrap": "^0.32.32",
     "bootstrap": "^5.2.3",
+    "node-sass": "4.14.1",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.7.3",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
-    "redux-toolkit": "^1.1.2",
-    "sass": "^1.61.0",
+    "sass-loader": "^10.0.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -39,5 +43,14 @@
     ]
   },
   "homepage": ".",
-  "proxy": "http://localhost:3000"
+  "proxy": "http://localhost:3000",
+  "transformIgnorePatterns": [
+    "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs|cjs|ts|tsx)$",
+    "^.+\\.module\\.(css|sass|scss)$"
+  ],
+  "moduleNameMapper": {
+    "^react-native$": "react-native-web",
+    "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy",
+    "^@/(.*)$": "<rootDir>/src/$1"
+  }
 }
