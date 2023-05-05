@@ -1,5 +1,6 @@
 import { Popover, Overlay } from 'react-bootstrap'
 import MenuList from './MenuList'
+import './dropdownMenu.scss'
 
 
 const DropdownMenu = ({ container, items, show, target, onHide }) => {
@@ -7,17 +8,18 @@ const DropdownMenu = ({ container, items, show, target, onHide }) => {
   return (
     <Overlay
       container={container}
+      delay={{ show: 250, hide: 400 }}
       flip
       rootClose
-      placement="bottom-start"
+      placement="bottom"
       show={show}
       target={target}
-      transition={false}
+      transition={true}
       onHide={onHide}
     >
       <Popover id="popover-container">
         <Popover.Body >
-          <MenuList items={items} onHide={onHide} />
+          <MenuList className="dropdown-menu-list" items={items} onHide={onHide} />
         </Popover.Body>
       </Popover>
     </Overlay>

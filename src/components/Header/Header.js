@@ -17,6 +17,7 @@ export default function Header(props){
   ]
 
   const handleUserDropdownMenu = (event, items=[]) => {
+    console.log('event',event)
     event.stopPropagation()
     setShowDropdownMenu(!showDropdownMenu)
     if (isEmpty(items)) {
@@ -24,7 +25,6 @@ export default function Header(props){
     }
 
     event.preventDefault()
-    event.target.getBoundingClientRect = () => new DOMRect(event.clientX, event.clientY)
     setDropdownMenuTarget(event.target)
     setDropdownMenuItems(items)
   }
@@ -33,7 +33,7 @@ export default function Header(props){
     return <div className="header-dict">
         <div className="nav-item dropdown header-welcome h-100 d-inline-flex align-items-center ">
             <Button type="button" variant='light'  ref={dropdownMenuContainerRef}
-              onClick={(ev) => handleUserDropdownMenu(ev, userDropdownItems)}>Username</Button>
+              onClick={(event) => handleUserDropdownMenu(event, userDropdownItems)}>Username</Button>
             <DropdownMenu
             container={dropdownMenuContainerRef}
             items={dropdownMenuItems}
