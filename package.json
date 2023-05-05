@@ -10,12 +10,14 @@
     "@testing-library/user-event": "^13.5.0",
     "@types/react-bootstrap": "^0.32.32",
     "bootstrap": "^5.2.3",
+    "lodash": "^4.17.21",
     "node-sass": "4.14.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.3",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "sass-loader": "^10.0.5",
+    "use-context-menu": "^0.2.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
