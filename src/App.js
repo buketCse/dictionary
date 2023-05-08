@@ -1,12 +1,11 @@
 import {useState} from 'react'
-import {useSelector, useDispatch} from 'react-redux'
+import {useSelector} from 'react-redux'
 import BodyComponent from "./components/Body/BodyComponent";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Login from './components/Login'
 import UserSettings from './components/UserSettings'
 import Preferences from './components/Preferences'
-import {setShowUserSettings} from './store/slices/appSlice'
 
 const selectFromState=(state)=>({
   showLogin: state.app.showLogin,
