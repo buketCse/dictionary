@@ -1,10 +1,19 @@
-.popover{
+.dropdown-popover{
+    width:146px;
+    height:75px;
+    margin-left:0px;
+    position: absolute;
+    background-color: #212529;
     .popover-arrow {
         display: none;
     }
     .popover-body{
+        padding:4px 4px 4px 12px;
+        width:100%;
     .menu-items{
         list-style-type: none;
+        padding:0px;
+        color:white;
     }
 }}
    

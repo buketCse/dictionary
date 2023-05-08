@@ -17,7 +17,7 @@ const DropdownMenu = ({ container, items, show, target, onHide }) => {
       transition={true}
       onHide={onHide}
     >
-      <Popover id="popover-container">
+      <Popover id="popover-container" className="dropdown-popover">
         <Popover.Body >
           <MenuList className="dropdown-menu-list" items={items} onHide={onHide} />
         </Popover.Body>
