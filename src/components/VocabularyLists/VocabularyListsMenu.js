@@ -1,36 +1,35 @@
 import {useRef, useState} from 'react'
-import {useDispatch, useSelector} from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { Button } from 'react-bootstrap'
 import {isEmpty} from 'lodash'
 import DropdownMenu from '../../helpers/DropdownMenu'
-import {setShowLearningScreen} from '../../store/slices/appSlice'
 import {setVocabListName} from '../../store/slices/vocabLists'
+import {setShowVocabularyLists} from '../../store/slices/appSlice'
 
-function LearningScreenMenu(props){
+function VocabularyLists(props){
     const dropdownMenuContainerRef = useRef(null)
     const dispatch = useDispatch()
-
     const [dropdownMenuTarget, setDropdownMenuTarget]= useState(null)
     const [dropdownMenuItems, setDropdownMenuItems] = useState([])
     const [showDropdownMenu, setShowDropdownMenu]= useState(false)
     const userDropdownItems=[
         {content:'Vocab List -1', onClick :()=>{
           dispatch(setVocabListName('Vocab List -1'))
-          dispatch(setShowLearningScreen(true))
+          dispatch(setShowVocabularyLists(true))
         }},
         {content:'Vocab List -2', onClick :()=>{
           dispatch(setVocabListName('Vocab List -2'))
-          dispatch(setShowLearningScreen(true))
-
+          dispatch(setShowVocabularyLists(true))
+       
         }},
         {content:'Vocab List -3', onClick :()=>{
           dispatch(setVocabListName('Vocab List -3'))
-          dispatch(setShowLearningScreen(true))
-
+          dispatch(setShowVocabularyLists(true))
+      
         }}
       ]
 
-    const handleStartLearningMenu = (event, items=[]) => {
+    const handleVocabularyListsMenu = (event, items=[]) => {
         event.stopPropagation()
         setShowDropdownMenu(!showDropdownMenu)
         if (isEmpty(items)) {
@@ -43,8 +42,8 @@ function LearningScreenMenu(props){
       }
 
     return <div className="nav-item dropdown header-welcome h-100 d-inline-flex align-items-center ">
-    <Button type="button" variant='success' ref={dropdownMenuContainerRef}
-      onClick={(event) => handleStartLearningMenu(event, userDropdownItems)}>Start Learning</Button>
+    <Button type="button" variant='dark' ref={dropdownMenuContainerRef}
+      onClick={(event) => handleVocabularyListsMenu(event, userDropdownItems)}>Vocabulary Lists</Button>
     <DropdownMenu
     container={dropdownMenuContainerRef}
     items={dropdownMenuItems}
@@ -55,4 +54,4 @@ function LearningScreenMenu(props){
 </div>
 }
 
-export default LearningScreenMenu
+export default VocabularyLists

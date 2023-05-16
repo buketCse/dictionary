@@ -1,10 +1,10 @@
 import React from 'react'
 import './header.scss'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import LanguageMenu from '../LanguageMenu'
+import LanguageMenu from '../Languages/LanguageMenu'
 import LearningScreenMenu from '../LearningScreen/LearningScreenMenu'
 import UserMenu from '../UserMenu'
-import VocabularyLists from '../VocabularyLists'
+import VocabularyListsMenu from '../VocabularyLists/VocabularyListsMenu'
 
 export default function Header(props){
   const username='Username'
@@ -13,7 +13,7 @@ export default function Header(props){
         <UserMenu username={username}/>
         <div className="header-buttons h-100 d-inline-flex align-items-center ">
             <LanguageMenu/>
-            <VocabularyLists/>
+            <VocabularyListsMenu/>
             <LearningScreenMenu/>
         </div>
     </div>

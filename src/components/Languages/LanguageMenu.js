@@ -1,18 +1,26 @@
 import {useRef, useState} from 'react'
+import { useDispatch } from 'react-redux'
 import { Button } from 'react-bootstrap'
 import {isEmpty} from 'lodash'
 import DropdownMenu from '../../helpers/DropdownMenu'
+import {setShowLanguageMenu} from '../../store/slices/appSlice'
+import {setLanguageNames} from '../../store/slices/languages'
 
 function LanguageMenu(props){
     const dropdownMenuContainerRef = useRef(null)
-
+    const dispatch = useDispatch()
     const [dropdownMenuTarget, setDropdownMenuTarget]= useState(null)
     const [dropdownMenuItems, setDropdownMenuItems] = useState([])
     const [showDropdownMenu, setShowDropdownMenu]= useState(false)
     const userDropdownItems=[
         {content:'English-Turkish', onClick :()=>{
+          dispatch(setLanguageNames('English-Turkish'))
+          dispatch(setShowLanguageMenu(true))
         }},
         {content:'Spanish-English', onClick :()=>{
+          dispatch(setLanguageNames('Spanish-English'))
+          dispatch(setShowLanguageMenu(true))
+
         }}
       ]
 
