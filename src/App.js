@@ -36,6 +36,8 @@ function App(props) {
     <div className="dictionary-app">
       <Header
       />
+      <div className="body">
+        <div className='body-dictionary'>
       {showUserSettings ?
         <UserSettings/>
         :showPreferences ?
@@ -51,7 +53,9 @@ function App(props) {
         vocabListName={vocabListName}/>
         :<BodyComponent/>
       }
+      </div>
       <Footer/>
+      </div>
     </div>
   )
 }

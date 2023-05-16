@@ -6,17 +6,19 @@
   width:100%;
 
   .body {
+    height: calc((100%) - 60px);
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Verdana', 'Roboto', 'Oxygen',
       'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  
+    background-color: #282C34;
+    color: white;
   }
 
   .body-dictionary{
-    height: calc(100% - 60px);
+    height: calc((100%) - 120px);
     justify-content: space-around;
     display: inline-flex;
     width: 100%;
