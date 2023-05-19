@@ -9,12 +9,12 @@ import VocabularyListsMenu from '../VocabularyLists/VocabularyListsMenu'
 export default function Header(props){
   const username='Username'
 
-    return <div className="header-dict">
+    return <header className="header-dict">
         <UserMenu username={username}/>
         <div className="header-buttons h-100 d-inline-flex align-items-center ">
             <LanguageMenu/>
             <VocabularyListsMenu/>
             <LearningScreenMenu/>
         </div>
-    </div>
+    </header>
 }

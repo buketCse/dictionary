@@ -36,7 +36,7 @@ function App(props) {
     <div className="dictionary-app">
       <Header
       />
-      <div className="body">
+      <body className='body'>
         <div className='body-dictionary'>
       {showUserSettings ?
         <UserSettings/>
@@ -55,7 +55,7 @@ function App(props) {
       }
       </div>
       <Footer/>
-      </div>
+      </body>
     </div>
   )
 }

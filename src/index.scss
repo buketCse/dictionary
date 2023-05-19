@@ -15,19 +15,23 @@
     -moz-osx-font-smoothing: grayscale;
     background-color: #282C34;
     color: white;
-  }
-
-  .body-dictionary{
-    height: calc((100%) - 120px);
-    justify-content: space-around;
-    display: inline-flex;
-    width: 100%;
-    margin-top:90px;
-
-    .info{
-        max-width: 500px;
+    .main-page{
+      justify-content: space-around;
+      display: inline-flex;
+      width:100%;
+    }
+    .body-dictionary{
+      height: calc((100%) - 120px);
+      width: 100%;
+      margin-top:90px;
+  
+      .info{
+          max-width: 500px;
+      }
     }
   }
+
+
 
   .login-container{
     height:100%;
