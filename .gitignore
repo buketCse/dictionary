@@ -26,4 +26,8 @@ yarn-error.log*
 
 src/**/*.css
 
+# Package lock file
 package-lock.json*
+
+# SASS
+src/**/*.css
