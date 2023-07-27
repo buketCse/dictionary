@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-    vocabListName: ''
+    posts: []
 }
 
 const vocabListSlice = createSlice({
@@ -18,6 +18,6 @@ export const {
     setVocabListName
 } = vocabListSlice.actions
 
-export const vocabListName = (state) => state.vocabListName
+export const posts = (state) => state.posts
 
 export default vocabListSlice.reducer

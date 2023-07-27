@@ -1,4 +1,5 @@
 import {useSelector} from 'react-redux'
+import { BrowserRouter as Router, Routes, Navigate, Route} from 'react-router-dom'
 import BodyComponent from "./components/Body/BodyComponent";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
@@ -8,6 +9,7 @@ import Preferences from './components/Preferences'
 import LearningScreen from './components/LearningScreen'
 import VocabularyLists from './components/VocabularyLists'
 import Languages from './components/Languages'
+
 
 const selectFromState=(state)=>({
   languageNames: state.languages.languageNames,
@@ -55,6 +57,12 @@ function App(props) {
       }
       </div>
       <Footer/>
+      <Router>
+            <Routes>
+                <Route exact path="/posts" component={VocabularyLists}/>
+            </Routes>
+            {/* <Navigate from="/" to="/posts"/> */}
+        </Router>
       </body>
     </div>
   )
